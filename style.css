@@ -1,0 +1,26 @@
+#paper {
+    margin: auto;
+}
+#qrcode {
+    height: 300px; 
+    width:300px; 
+    background-color: darkgray;
+}
+
+.cool-button {
+
+    height: 75px;
+    width: 75px;
+    text-overflow: clip;
+
+}
+
+.control-panel {
+    display: inline-flex;
+}
+.fill-form {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    background-color: burlywood;
+}
