@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="control-panel">
+        <ol>
+           <h1><li>Please enter all fields to generate warranty paper.</li></h1>
+            <h1><li>Click "Generate Warranty"</li></h1>
+            <h1><li>Click "Download Warranty Page"</li></h1>
+        </ol>
+   
+        <button id="qrBtn" class="cool-button" onclick="fillForm()">Generate Warranty</button>
+        <button class="cool-button" onclick="downloadDiv()">Download Warranty Page</button>
+        
+        <div class="fill-form">
+            <input id="dealer" value="dealer" />
+            <input id="tel" value="telephone" />
+            <input id="store" value="Store" />
+            <input id="model" value="Model Number" />
+            <input id="address" value="Address" />
+            <input id="email" value="Email" />
+            <input id="date" type= "date" />
+            <input id="serial" value="Serial" />
+        </div>
+        
+        
+        <input type="file" id="qrfile" name="load QR code">
+
+        <br>
+
+        <div id="qr-reader" style="width:500px"></div>
+        <div id="qr-reader-results"></div>
+
+        
+    </div>
     
-    <input id="dealer" value="dealer" />
-    <input id="tel" value="telephone" />
-    <input id="store" value="Store" />
-    <input id="model" value="Model Number" />
-    <input id="address" value="Address" />
-    <input id="email" value="Email" />
-    <input id="date" type= "date" />
-    <input id="serial" value="Serial" />
+   
 
     <div id="paper" style="width: 700px; height:900px; background-color: blanchedalmond;">
         
+        
         <h3>Product Registration Information</h3>
 
-        <div class="col-container" style="display: flex; flex-direction: row;">
+        <div class="col-container" id="warranty-page" style="display: flex; flex-direction: row;">
 
             <div id="left-col" style="padding:10px; display: flex; flex-direction: column; min-width: max-content;"> 
                 <label><strong>Dealer Name :</strong><label id="dealerFill">____________________</label></label>
@@ -38,14 +63,19 @@
                 <label><strong>Date of Purchase:</strong> <label id="dateFill">____________________</label></label>
                 <label><strong>Serial Number:</strong> <label id="serialFill">____________________</label></label>
             </div>
-        </div>
-        
-        <button id="qrBtn" onclick="fillForm()">Generate Warranty</button>
 
-        <div id="qrcode" style="height: 300px; width:300px; background-color: darkgray;"></div>
+            <div id="qrcode"></div>
+        </div>
+
+        
+    
     </div>
+ 
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    <script src="html5-qrcode.min.js"></script>
     <script src="script.js"></script> 
     <script src="qrcode.js"></script>
 
