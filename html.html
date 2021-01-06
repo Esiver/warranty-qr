@@ -11,23 +11,11 @@
     <div class="control-panel">
         <ol>
            <h1><li>Please enter all fields to generate warranty paper.</li></h1>
-            <h1><li>Click "Generate Warranty"</li></h1>
+            <h1><li>Click "Fill Warranty"</li></h1>
+            <h1><li>Click "Generate Warranty Page"</li></h1>
             <h1><li>Click "Download Warranty Page"</li></h1>
         </ol>
    
-        <button id="qrBtn" class="cool-button" onclick="fillForm()">Generate Warranty</button>
-        <button class="cool-button" onclick="downloadDiv()">Download Warranty Page</button>
-        
-        <div class="fill-form">
-            <input id="dealer" value="dealer" />
-            <input id="tel" value="telephone" />
-            <input id="store" value="Store" />
-            <input id="model" value="Model Number" />
-            <input id="address" value="Address" />
-            <input id="email" value="Email" />
-            <input id="date" type= "date" />
-            <input id="serial" value="Serial" />
-        </div>
         
         
         <input type="file" id="qrfile" name="load QR code">
@@ -40,16 +28,71 @@
         
     </div>
     
+    <div class="control-panel">
+        <button id="qrBtn" class="cool-button" onclick="fillForm()">Fill Warranty</button>
+        <button class="cool-button" onclick="downloadDiv()">Generate Warranty Page</button>
+        
+        <div class="fill-form">
+            <div class="col">
+                Dealer's Name <input id="dealer" value="dealer" />
+                Tel. Number <input id="tel" value="telephone" />
+                Store Name <input id="store" value="Store" />
+                Model Number<input id="model" value="Model Number" />
+            </div>
+            <div class="col">
+                Address<input id="address" value="Address" />
+                Email (Optional) <input id="email" value="Email" />
+                Date of Purchase<input id="date" type= "date" />
+                Serial Number <input id="serial" value="Serial" />
+            </div>
+            
+        </div>
+    </div>
    
 
-    <div id="paper" style="width: 700px; height:900px; background-color: blanchedalmond;">
+    <div id="paper">
         
-        
-        <h3>Product Registration Information</h3>
+        <h1>Warranty Card</h1>
+        <h1> WINDOW AIR CONDITIONER</h1>
 
-        <div class="col-container" id="warranty-page" style="display: flex; flex-direction: row;">
+        <p>
+            Should your <strong>EMERSON QUIET KOOL brand</strong> WINDOWAIR CONDITIONER prove to be defective in material or workmanship under
+            normal use during the warranty period listed below, effective during the date of original consumer purchase of the product, <strong>EMERSON QUIET KOOL</strong>
+            will replace the defective part(s). Replacement unit or parts may be new or remanufactured service exchange that are equivalent to new in performance
+            and reliability. Replacement parts are warrented for the unexperied portion of the original warranty period. This limited warranty is good
+            only to the original purchaser of the product and effective only when used in the United States of America.
+        </p>
 
-            <div id="left-col" style="padding:10px; display: flex; flex-direction: column; min-width: max-content;"> 
+        <div class="div row-container" style="margin:auto; margin-bottom: 20px; width:max-content">
+            <div class="div box col" >
+                <h2>Warranty Period</h2>
+
+                <h3>
+                    Labor: 12 months from date of purchase
+                </h3>
+                <h3>
+                    Parts: 24 months from date of purchase
+                </h3>
+                <h3>
+                    Compressor: 60 months from date of purchase
+                </h3>
+            </div>
+            <div class="div box col">
+                <h2>For Customer Service</h2>
+                <p> Call 1-844-801-8880 and choose the appropriate prompt</p>
+                <p>Please have the following information ready:</p>
+                <ul>
+                    <li>Prodyct Type (Window Air Conditioner)</li>
+                    <li>Model Number</li>
+                    <li>Serial Number</li>
+                    <li>ZIP Code</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row-container" id="warranty-page">
+
+            <div class="col"> 
                 <label><strong>Dealer Name :</strong><label id="dealerFill">____________________</label></label>
                 <label><strong>Tel Number:</strong><label id="telFill">____________________</label></label>
                 <label><strong>Store Name:</strong><label id="storeFill">____________________</label></label>
@@ -57,17 +100,24 @@
             
             </div>
 
-            <div id="right-col" style="padding:10px; display: flex; flex-direction: column; min-width: max-content;"> 
+            <div class="col" style="padding:10px; display: flex; flex-direction: column; min-width: max-content;"> 
                 <label><strong>Address:</strong><label id="addressFill">____________________</label></label>
                 <label><strong>Email (Optional):</strong><label id="emailFill">____________________</label></label>
                 <label><strong>Date of Purchase:</strong> <label id="dateFill">____________________</label></label>
                 <label><strong>Serial Number:</strong> <label id="serialFill">____________________</label></label>
             </div>
 
-            <div id="qrcode"></div>
+            <div id="qrcode">
+
+                
+            </div>
+
+           
         </div>
 
-        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo atque doloremque distinctio aperiam ratione possimus soluta, neque dolorum adipisci itaque quo velit iure. Quo, hic! Commodi quisquam aliquid delectus odit.
+        </p>
     
     </div>
  

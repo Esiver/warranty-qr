@@ -1,26 +1,44 @@
 #paper {
+    padding: 8px;
     margin: auto;
+    margin-top: 20px;
+    width: 992px; 
+    height:1403px; 
+    background-color: floralwhite;
+    border: 1px solid black;
 }
+#paper > h1 {text-align: center;}
+
 #qrcode {
     height: 300px; 
     width:300px; 
     background-color: darkgray;
+    margin:auto;
 }
 
 .cool-button {
-
     height: 75px;
     width: 75px;
     text-overflow: clip;
-
 }
 
 .control-panel {
     display: inline-flex;
 }
 .fill-form {
-    width: 400px;
-    height: 400px;
+    height:400px;
+    align-items: center;
     display: inline-block;
     background-color: burlywood;
+}
+
+.col {
+    padding:10px; display: flex; flex-direction: column; min-width: max-content;
+}
+.row-container {
+    display: flex; 
+    flex-direction: row;
+}
+.box {
+    border: 1px solid black;
 }
